@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_chat import message
 
 import openai
-from config.config import open_api_key
+from config import open_api_key
 openai.api_key = open_api_key
 
 # openAI code
