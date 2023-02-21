@@ -1,2 +1,2 @@
-# chatgpt-mini
-This is our chatgpt clone and this is a demo.
+Charly
+This is our chatbot and this is a demo.
