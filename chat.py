@@ -28,18 +28,25 @@ def chatgpt_mini(input, history):
     print(s)
     s.append(input)
     inp = ' '.join(s)
-    output = openai_create(inp)
+    if input.lower() in ["what's your name?", "what's your name, charly?"]:
+        output = " Charly"
+    else:
+        output = openai_create(inp)
     history.append((input, output))
     return history, history
+    """ output = openai_create(inp)
+    history.append((input, output))
+    return history, history """
 
 # Streamlit App
 st.set_page_config(
     layout="wide",
-    page_title="Chat - Demo",
-    page_icon=":robot:"
+    initial_sidebar_state="auto",
+    page_title="Charly",
+    page_icon="🤖"
 )
 
-st.header("Chat Demo")
+st.header("Charly Demo")
 
 history_input = []
 
