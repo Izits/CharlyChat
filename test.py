@@ -3,7 +3,8 @@ from unittest.mock import patch, MagicMock
 
 import streamlit as st
 from streamlit_chat import message
-from chat import chatgpt_mini, get_text
+from chat import chatgpt_mini
+from chat import get_text
 
 
 class TestApp(unittest.TestCase):
@@ -13,7 +14,7 @@ class TestApp(unittest.TestCase):
         input_text = "Hi, how are you?"
         history_input = []
 
-        mock_create.return_value.choices[0].text = "I'm fine, thank you. How can I assist you?"
+        mock_create.return_value.choices[0].text = "Ok"
 
         output = chatgpt_mini(input_text, history_input)
 
