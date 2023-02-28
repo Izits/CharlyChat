@@ -2,10 +2,10 @@ import streamlit as st
 from streamlit_chat import message
 
 import openai
-from config import open_api_key
+from config.config import open_api_key
 openai.api_key = open_api_key
 
-# openAI code
+# OpenAI code
 def openai_create(prompt):
 
     response = openai.Completion.create(
@@ -22,7 +22,7 @@ def openai_create(prompt):
     return response.choices[0].text
 
 
-def chatgpt_mini(input, history):
+def charly_chat(input, history):
     history = history or []
     s = list(sum(history, ()))
     print(s)
@@ -63,7 +63,7 @@ user_input = get_text()
 
 
 if user_input:
-    output = chatgpt_mini(user_input, history_input)
+    output = charly_chat(user_input, history_input)
     history_input.append([user_input, output])
     st.session_state.past.append(user_input)
     st.session_state.generated.append(output[0])
