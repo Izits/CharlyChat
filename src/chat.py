@@ -8,14 +8,13 @@ openai.api_key = open_api_key
 # OpenAI code
 def openai_create(prompt):
     response = openai.Completion.create(
-        engine="text-davinci-002",
+        engine="text-davinci-003",
         prompt=prompt,
-        temperature=0.9,
-        max_tokens=1500,
+        temperature=0.5,
+        max_tokens=1000,
         top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0.6,
-        stop=[" Human:", " AI:"]
+        n=1,
+        stop=None
     )
     return response.choices[0].text
 
