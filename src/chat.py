@@ -1,9 +1,14 @@
+import json
 import streamlit as st
 from streamlit_chat import message
 import openai
 from config.config import open_api_key
 
 openai.api_key = open_api_key
+
+# Load JSON data
+with open('data/whatName.json') as f:
+    questions = json.load(f)
 
 # OpenAI code
 def openai_create(prompt):
@@ -25,8 +30,10 @@ def charly_chat(input, history):
     print(s)
     s.append(input)
     inp = ' '.join(s)
-    if input.lower() in ["what's your name?", "what's your name, charly?"]:
-        output = "Charly"
+    for q in questions:
+        if input.lower() == q["question"].lower():
+            output = "Mi nombre es Charly. ¿En qué más puedo ayudarte?"
+            break
     else:
         output = openai_create(inp)
     history.append((input, output))
