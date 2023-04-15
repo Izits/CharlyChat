@@ -1,14 +1,9 @@
 import streamlit as st
 from streamlit_chat import message
 import openai
-import json
 from config.config import open_api_key
 
 openai.api_key = open_api_key
-
-# Load dataset
-with open("data/questions.json", "r") as f:
-    questions = json.load(f)
 
 # OpenAI code
 def openai_create(prompt):
@@ -23,22 +18,17 @@ def openai_create(prompt):
     )
     return response.choices[0].text
 
+
 def charly_chat(input, history):
     history = history or []
     s = list(sum(history, ()))
     print(s)
     s.append(input)
     inp = ' '.join(s)
-
-    # Check if input is in dataset
-    for q in questions:
-        if input.lower() == q["question"].lower():
-            output = "Charly"
-            history.append((input, output))
-            return history, history
-
-    # If input is not in dataset, use OpenAI
-    output = openai_create(inp)
+    if input.lower() in ["what's your name?", "what's your name, charly?"]:
+        output = "Charly"
+    else:
+        output = openai_create(inp)
     history.append((input, output))
     return history, history
 
