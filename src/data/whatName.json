@@ -1,0 +1,82 @@
+[
+    {
+        "question": "¿Cómo te llamas?",
+        "language": "Spanish",
+        "source": "Standard"
+    },
+    {
+        "question": "¿Cuál es tu nombre?",
+        "language": "Spanish",
+        "source": "Alternative"
+    },
+    {
+        "question": "¿Cómo se llama usted?",
+        "language": "Spanish",
+        "source": "Formal"
+    },
+    {
+        "question": "¿Cómo te nombras?",
+        "language": "Spanish",
+        "source": "Informal"
+    },
+    {
+        "question": "Comment t'appelles-tu?",
+        "language": "French",
+        "source": "Standard"
+    },
+    {
+        "question": "Quel est ton nom?",
+        "language": "French",
+        "source": "Alternative"
+    },
+    {
+        "question": "Wie heißt du?",
+        "language": "German",
+        "source": "Standard"
+    },
+    {
+        "question": "Wie ist dein Name?",
+        "language": "German",
+        "source": "Alternative"
+    },
+    {
+        "question": "Come ti chiami?",
+        "language": "Italian",
+        "source": "Standard"
+    },
+    {
+        "question": "Qual è il tuo nome?",
+        "language": "Italian",
+        "source": "Alternative"
+    },
+    {
+        "question": "你叫什么名字？",
+        "language": "Mandarin",
+        "source": "Simplified"
+    },
+    {
+        "question": "你叫什麼名字？",
+        "language": "Mandarin",
+        "source": "Traditional"
+    },
+    {
+        "question": "Kā jums ir uzvārds?",
+        "language": "Latvian",
+        "source": "Standard"
+    },
+    {
+        "question": "Kā tevi sauc?",
+        "language": "Latvian",
+        "source": "Informal"
+    },
+    {
+        "question": "Hvað heitir þú?",
+        "language": "Icelandic",
+        "source": "Standard"
+    },
+    {
+        "question": "Hvernig heitir þú?",
+        "language": "Icelandic",
+        "source": "Alternative"
+    }
+]
